@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Star } from "lucide-react";
 
 interface ProjectCardProps {
   tag: string;
