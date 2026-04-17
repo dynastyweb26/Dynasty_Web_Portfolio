@@ -40,7 +40,7 @@ const Portfolio = () => {
 
           <ProjectCard
             reverse
-            tag="Project 02"
+            tag="Studio Favorite"
             name="Vydale T.C. Projects"
             niche="Speaker · Author · Youth Empowerment"
             images={[vydale1, vydale2, vydale3, vydale4]}
