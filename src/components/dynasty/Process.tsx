@@ -1,4 +1,8 @@
 import { MessageCircle, LayoutGrid, Code2, Rocket } from "lucide-react";
+import discoveryImg from "@/assets/process-discovery.jpg";
+import designImg from "@/assets/process-design.jpg";
+import buildImg from "@/assets/process-build.jpg";
+import launchImg from "@/assets/process-launch.jpg";
 
 const steps = [
   {
@@ -6,24 +10,32 @@ const steps = [
     icon: MessageCircle,
     title: "Discovery & strategy call",
     desc: "We learn your business, goals, and customers — then map the site around them.",
+    img: discoveryImg,
+    alt: "Hand sketching notes in a notebook under warm light",
   },
   {
     num: "02",
     icon: LayoutGrid,
     title: "Design sprint (24–48 hours)",
     desc: "You get a custom design concept fast, tailored to your brand and industry.",
+    img: designImg,
+    alt: "Hand sketching wireframes on paper next to a tablet",
   },
   {
     num: "03",
     icon: Code2,
     title: "Build, integrate & optimize",
     desc: "Hand-coded pages, forms, and SEO setup — built for speed and conversions.",
+    img: buildImg,
+    alt: "Close-up of code on a dark monitor",
   },
   {
     num: "04",
     icon: Rocket,
     title: "QA, launch & handoff",
     desc: "We test everything, launch your site, and hand over the keys with full support.",
+    img: launchImg,
+    alt: "Hand pressing a glowing key on a laptop keyboard",
   },
 ];
 
@@ -77,24 +89,46 @@ const Process = () => {
               return (
                 <div
                   key={s.num}
-                  className="relative bg-white rounded-2xl border-t-2 border-gold p-7 md:p-8 shadow-[0_10px_40px_-20px_hsl(var(--gold)/0.35)] hover:-translate-y-1 transition-transform duration-300"
+                  className="relative bg-white rounded-2xl border-t-2 border-gold overflow-hidden shadow-[0_10px_40px_-20px_hsl(var(--gold)/0.35)] hover:-translate-y-1 transition-transform duration-300"
                 >
-                  {/* Icon badge — sits on the connecting line */}
-                  <div className="relative -mt-12 mb-6 flex justify-center">
-                    <div className="h-12 w-12 rounded-full bg-[#0A0A0A] border border-gold flex items-center justify-center">
-                      <Icon className="h-5 w-5 text-gold" strokeWidth={1.75} />
+                  {/* Banner image */}
+                  <div className="relative h-36 md:h-40 overflow-hidden bg-[#0A0A0A]">
+                    <img
+                      src={s.img}
+                      alt={s.alt}
+                      width={1024}
+                      height={768}
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-cover opacity-90"
+                      style={{ filter: "saturate(0.55) contrast(1.05)" }}
+                    />
+                    {/* Gold tint + bottom fade into white card */}
+                    <div
+                      className="absolute inset-0"
+                      style={{
+                        background:
+                          "linear-gradient(180deg, hsl(var(--gold) / 0.10) 0%, transparent 40%, rgba(255,255,255,0.0) 70%, #ffffff 100%)",
+                      }}
+                    />
+                    {/* Icon badge — overlaps image and white body */}
+                    <div className="absolute left-1/2 -translate-x-1/2 -bottom-6 z-10">
+                      <div className="h-12 w-12 rounded-full bg-[#0A0A0A] border border-gold flex items-center justify-center shadow-[0_6px_20px_-6px_hsl(var(--gold)/0.6)]">
+                        <Icon className="h-5 w-5 text-gold" strokeWidth={1.75} />
+                      </div>
                     </div>
                   </div>
 
-                  <div className="font-display text-gold text-xs tracking-[0.3em] mb-3 text-center">
-                    {s.num}
+                  <div className="p-7 md:p-8 pt-10">
+                    <div className="font-display text-gold text-xs tracking-[0.3em] mb-3 text-center">
+                      {s.num}
+                    </div>
+                    <h3 className="font-display text-lg md:text-xl text-neutral-900 mb-3 text-center">
+                      {s.title}
+                    </h3>
+                    <p className="text-sm text-neutral-600 leading-relaxed text-center">
+                      {s.desc}
+                    </p>
                   </div>
-                  <h3 className="font-display text-lg md:text-xl text-neutral-900 mb-3 text-center">
-                    {s.title}
-                  </h3>
-                  <p className="text-sm text-neutral-600 leading-relaxed text-center">
-                    {s.desc}
-                  </p>
                 </div>
               );
             })}
