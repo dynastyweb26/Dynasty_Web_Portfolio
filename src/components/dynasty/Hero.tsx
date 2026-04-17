@@ -45,7 +45,6 @@ const Hero = () => {
           style={{ animationDelay: "0.65s" }}
         >
           {[
-            { num: "2", label: "Sites launched" },
             { num: "TX", label: "Based in Texas" },
             { num: "100%", label: "Custom built" },
           ].map((s) => (
