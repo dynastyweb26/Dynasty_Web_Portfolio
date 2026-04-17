@@ -18,7 +18,7 @@ const Portfolio = () => {
 
         <div className="space-y-28 md:space-y-40">
           <ProjectCard
-            tag="Project 01"
+            tag="Studio Favorite"
             name="Crazy Door"
             niche="Handyman & Home Services · East Texas"
             images={[crazy1, crazy2, crazy3]}
@@ -40,7 +40,7 @@ const Portfolio = () => {
 
           <ProjectCard
             reverse
-            tag="Project 02"
+            tag="Studio Favorite"
             name="Vydale T.C. Projects"
             niche="Speaker · Author · Youth Empowerment"
             images={[vydale1, vydale2, vydale3, vydale4]}

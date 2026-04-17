@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Star } from "lucide-react";
 
 interface ProjectCardProps {
   tag: string;
@@ -40,7 +41,10 @@ const ProjectCard = ({ tag, name, niche, bullets, palette, paletteLabel, images,
 
       {/* Info */}
       <div className={reverse ? "md:order-1" : ""}>
-        <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-4">{tag}</p>
+        <p className="inline-flex items-center gap-2 text-[11px] tracking-[0.3em] uppercase text-gold mb-4">
+          <Star className="h-3 w-3 fill-gold stroke-gold" />
+          {tag}
+        </p>
         <h3 className="font-display text-4xl md:text-5xl tracking-tight">{name}</h3>
         <p className="mt-3 text-sm text-muted-foreground italic">{niche}</p>
         <div className="mt-6 h-px w-16 bg-gold/60" />
