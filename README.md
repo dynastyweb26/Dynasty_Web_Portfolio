@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Dynasty Web
 
-TODO: Document your project here
+Web design & branding studio for businesses that win clients online.
