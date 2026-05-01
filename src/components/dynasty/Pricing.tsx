@@ -1,7 +1,7 @@
 const tiers = [
   {
     label: "Starter Site",
-    price: "Starting at $800",
+    price: "Starting at $400",
     desc: "Perfect for new businesses ready to look professional and start capturing leads online.",
     bullets: [
       "Custom design tailored to your brand",
