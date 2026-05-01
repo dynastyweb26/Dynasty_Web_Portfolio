@@ -2,10 +2,9 @@ import { useState, FormEvent } from "react";
 import emailjs from "emailjs-com";
 import { toast } from "@/hooks/use-toast";
 
-// TODO: Replace with your EmailJS credentials
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+const EMAILJS_SERVICE_ID = "service_2qf25vg";
+const EMAILJS_TEMPLATE_ID = "YOUR_AUTOREPLY_TEMPLATE_ID"; // TODO: replace with real template ID from EmailJS dashboard
+const EMAILJS_PUBLIC_KEY = "4pkyVmD_Szio4gRT7";
 
 const services = [
   "Starter Site ($400)",
