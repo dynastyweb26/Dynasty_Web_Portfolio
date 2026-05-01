@@ -1,10 +1,10 @@
 const services = [
-  { num: "01", name: "Custom Website Design", desc: "Designed from scratch to match your brand — no cookie-cutter templates." },
-  { num: "02", name: "Mobile-Friendly Layouts", desc: "Looks perfect on every phone, tablet, and desktop your clients use." },
-  { num: "03", name: "Quote & Contact Forms", desc: "Let customers request a quote or reach you directly from the site — 24/7." },
-  { num: "04", name: "Google-Ready SEO Setup", desc: "Built to show up when locals search for your services in your city." },
-  { num: "05", name: "Brand Identity", desc: "Logo, colors, and fonts that make your business look established and trustworthy." },
-  { num: "06", name: "Portfolio & Gallery Sections", desc: "Show off your work with photo galleries that build instant credibility." },
+  { num: "01", name: "Show Up on Google", desc: "We build your site so locals find you first when they search for your service — before your competitors." },
+  { num: "02", name: "Look Legit on Every Device", desc: "Your site works perfectly on any phone, tablet, or desktop — so you never lose a lead because of a broken layout." },
+  { num: "03", name: "Get Quote Requests While You Sleep", desc: "Built-in contact and quote forms capture leads 24/7 — no missed calls, no phone tag." },
+  { num: "04", name: "Rank in Your City", desc: "Google-ready SEO setup from day one so your business shows up where your customers are searching." },
+  { num: "05", name: "A Brand That Builds Trust Instantly", desc: "Logo, colors, and fonts tailored to your trade — so customers trust you before they ever call." },
+  { num: "06", name: "Show Off Your Work", desc: "Photo galleries and project showcases that prove your quality before the first conversation." },
 ];
 
 const Services = () => {
