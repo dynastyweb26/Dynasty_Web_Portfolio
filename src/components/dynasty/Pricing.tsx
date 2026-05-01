@@ -8,13 +8,13 @@ const tiers = [
       "Mobile-optimized layout",
       "Quote & contact form",
       "Basic SEO setup",
-      "1 round of revisions",
+      "5+ pages",
     ],
     popular: false,
   },
   {
     label: "Growth Site",
-    price: "Starting at $1,500",
+    price: "Starting at $400",
     desc: "For businesses ready to dominate locally — more pages, more trust signals, more conversions.",
     bullets: [
       "Everything in Starter",
@@ -62,7 +62,7 @@ const Pricing = () => {
               <ul className="space-y-3 mb-10">
                 {t.bullets.map((b) => (
                   <li key={b} className="flex items-start gap-3 text-sm text-foreground/90">
-                    <span className="text-gold mt-1 flex-shrink-0">✦</span>
+                    <span className="text-gold mt-1 flex-shrink-0"></span>
                     <span>{b}</span>
                   </li>
                 ))}
