@@ -1,6 +1,3 @@
-const mailto =
-  "mailto:dynstyweb26@gmail.com?subject=Website Quote Request&body=Hi Dynasty Web, I am interested in getting a website built for my business. My name is: %0AMy business is: %0AMy phone number is: %0APlease contact me!";
-
 const CTA = () => {
   return (
     <section className="relative py-28 md:py-40 border-t border-gold-faint overflow-hidden">
@@ -22,12 +19,6 @@ const CTA = () => {
           Whether you're a handyman, contractor, or entrepreneur — we'll build you something that
           makes your phone ring.
         </p>
-        <a
-          href={mailto}
-          className="inline-block mt-10 px-9 py-4 rounded-full bg-gold text-primary-foreground text-sm font-medium tracking-wide hover:bg-gold-light transition-colors shadow-[0_15px_40px_-10px_hsl(var(--gold)/0.6)]"
-        >
-          Start your project
-        </a>
       </div>
     </section>
   );
