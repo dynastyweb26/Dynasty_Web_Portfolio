@@ -3,7 +3,7 @@ import emailjs from "emailjs-com";
 import { toast } from "@/hooks/use-toast";
 
 const EMAILJS_SERVICE_ID = "service_2qf25vg";
-const EMAILJS_TEMPLATE_ID = "YOUR_AUTOREPLY_TEMPLATE_ID"; // TODO: replace with real template ID from EmailJS dashboard
+const EMAILJS_TEMPLATE_ID = "template_c6hp195";
 const EMAILJS_PUBLIC_KEY = "4pkyVmD_Szio4gRT7";
 
 const services = [
