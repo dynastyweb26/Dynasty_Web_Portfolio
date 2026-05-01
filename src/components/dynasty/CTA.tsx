@@ -3,7 +3,7 @@ const mailto =
 
 const CTA = () => {
   return (
-    <section id="contact" className="relative py-28 md:py-40 border-t border-gold-faint overflow-hidden">
+    <section className="relative py-28 md:py-40 border-t border-gold-faint overflow-hidden">
       <div
         aria-hidden
         className="absolute inset-0 -z-10"
