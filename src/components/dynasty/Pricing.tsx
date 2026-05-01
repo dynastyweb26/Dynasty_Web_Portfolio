@@ -56,7 +56,10 @@ const Pricing = () => {
                 </div>
               )}
               <h3 className="font-display text-2xl md:text-3xl mb-3">{t.label}</h3>
-              <div className="font-display text-gold text-xl md:text-2xl mb-5">{t.price}</div>
+              <div className="font-display text-gold text-xl md:text-2xl mb-1">{t.price}</div>
+              <p className="text-xs text-muted-foreground/80 italic mb-5">
+                or finance from <span className="text-gold not-italic">$200/month</span>
+              </p>
               <p className="text-sm text-muted-foreground leading-relaxed mb-8">{t.desc}</p>
 
               <ul className="space-y-3 mb-10">
