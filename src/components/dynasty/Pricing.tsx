@@ -14,7 +14,7 @@ const tiers = [
   },
   {
     label: "Growth Site",
-    price: "Starting at $400",
+    price: "Starting at $800",
     desc: "For businesses ready to dominate locally — more pages, more trust signals, more conversions.",
     bullets: [
       "Everything in Starter",
