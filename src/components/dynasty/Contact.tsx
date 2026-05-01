@@ -8,8 +8,8 @@ const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
 const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
 
 const services = [
-  "Starter Site ($800)",
-  "Growth Site ($1,500)",
+  "Starter Site ($400)",
+  "Growth Site ($800)",
   "Brand Identity Only",
   "Not Sure Yet — Let's Talk",
 ];
