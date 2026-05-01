@@ -5,6 +5,7 @@ import Pricing from "@/components/dynasty/Pricing";
 import Process from "@/components/dynasty/Process";
 import Portfolio from "@/components/dynasty/Portfolio";
 import CTA from "@/components/dynasty/CTA";
+import Contact from "@/components/dynasty/Contact";
 import Footer from "@/components/dynasty/Footer";
 
 const Index = () => {
@@ -17,6 +18,7 @@ const Index = () => {
       <Process />
       <Portfolio />
       <CTA />
+      <Contact />
       <Footer />
     </main>
   );
