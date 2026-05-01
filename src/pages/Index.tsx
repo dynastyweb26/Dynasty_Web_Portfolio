@@ -1,6 +1,7 @@
 import Nav from "@/components/dynasty/Nav";
 import Hero from "@/components/dynasty/Hero";
 import Services from "@/components/dynasty/Services";
+import Pricing from "@/components/dynasty/Pricing";
 import Process from "@/components/dynasty/Process";
 import Portfolio from "@/components/dynasty/Portfolio";
 import CTA from "@/components/dynasty/CTA";
@@ -12,6 +13,7 @@ const Index = () => {
       <Nav />
       <Hero />
       <Services />
+      <Pricing />
       <Process />
       <Portfolio />
       <CTA />
