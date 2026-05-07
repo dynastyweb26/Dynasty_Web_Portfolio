@@ -1,3 +1,5 @@
+# Lovable internal files
+.lovable/
 # Logs
 logs
 *.log
