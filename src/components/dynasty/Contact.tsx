@@ -49,10 +49,11 @@ const Contact = () => {
       );
 
       toast({
-        title: "Message sent",
-        description: "Thanks! We'll get back to you within 24 hours.",
+        title: "Details received!",
+        description: "Redirecting you to book your call...",
       });
       setForm({ name: "", email: "", phone: "", service: "", message: "" });
+      window.open("https://calendly.com/dynastyweb26/30min", "_blank");
     } catch (err) {
       console.error("EmailJS error", err);
       toast({
@@ -72,12 +73,12 @@ const Contact = () => {
     <section id="contact" className="py-24 md:py-32 border-t border-gold-faint">
       <div className="max-w-3xl mx-auto px-6 md:px-10">
         <div className="text-center mb-16">
-          <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-4">— Contact —</p>
+          <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-4">— Schedule a Discovery Call —</p>
           <h2 className="font-display text-4xl md:text-5xl tracking-tight">
-            Let's Build Something
+            Let's Talk
           </h2>
           <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            Tell us about your project and we'll get back to you within 24 hours.
+            Tell us about your project, then book a time that works for you — we'll come prepared.
           </p>
         </div>
 
@@ -177,7 +178,7 @@ const Contact = () => {
             disabled={loading}
             className="w-full px-9 py-4 rounded-full bg-gold text-primary-foreground text-sm font-medium tracking-wide hover:bg-gold-light transition-colors shadow-[0_15px_40px_-10px_hsl(var(--gold)/0.6)] disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            {loading ? "Sending..." : "Send My Project Details"}
+            {loading ? "Sending..." : "Book My Free Discovery Call →"}
           </button>
         </form>
       </div>
