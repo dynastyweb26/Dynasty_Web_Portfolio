@@ -10,7 +10,7 @@ const services = [
   "Starter Site ($400)",
   "Growth Site ($800)",
   "Brand Identity Only",
-  "Not Sure Yet — Let's Talk",
+  "Will decide on Discovery Call",
 ];
 
 const Contact = () => {
