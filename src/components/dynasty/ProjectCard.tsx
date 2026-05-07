@@ -10,9 +10,10 @@ interface ProjectCardProps {
   paletteLabel: string;
   images: string[];
   reverse?: boolean;
+  url?: string;
 }
 
-const ProjectCard = ({ tag, name, niche, bullets, palette, paletteLabel, images, reverse }: ProjectCardProps) => {
+const ProjectCard = ({ tag, name, niche, bullets, palette, paletteLabel, images, reverse, url }: ProjectCardProps) => {
   const [idx, setIdx] = useState(0);
 
   useEffect(() => {
@@ -84,6 +85,17 @@ const ProjectCard = ({ tag, name, niche, bullets, palette, paletteLabel, images,
             />
           ))}
         </div>
+
+        {url && (
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-gold text-gold hover:bg-gold hover:text-primary-foreground transition-colors rounded-full px-5 py-2 text-sm font-medium tracking-wide inline-block mt-4"
+          >
+            Visit Website →
+          </a>
+        )}
       </div>
     </div>
   );

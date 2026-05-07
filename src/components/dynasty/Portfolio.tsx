@@ -21,6 +21,7 @@ const Portfolio = () => {
             tag="Studio Favorite"
             name="Crazy Door"
             niche="Handyman & Home Services · East Texas"
+            url="https://crazydoorhandyman.com/"
             images={[crazy1, crazy2, crazy3]}
             palette={[
               { color: "#0A0A0A", label: "Black" },
@@ -43,6 +44,7 @@ const Portfolio = () => {
             tag="Studio Favorite"
             name="Vydale T.C. Projects"
             niche="Speaker · Author · Youth Empowerment"
+            url="https://vydaletcprojects.com/"
             images={[vydale1, vydale2, vydale3, vydale4]}
             palette={[
               { color: "#3B0D6E", label: "Purple" },
