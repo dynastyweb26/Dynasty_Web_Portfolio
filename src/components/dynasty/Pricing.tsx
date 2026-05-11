@@ -3,7 +3,7 @@ import { Home, Rocket, ShieldCheck } from "lucide-react";
 const tiers = [
   {
     label: "Starter Site",
-    price: "$600",
+    price: "$500",
     subtitle: "Get found. Look credible. Start capturing leads.",
     badge: "Best for new businesses",
     icon: Home,
@@ -19,7 +19,7 @@ const tiers = [
       "1 round of revisions",
       "48-72 hour delivery",
     ],
-    cta: "Get Started — $600",
+    cta: "Get Started — $500",
     popular: false,
   },
   {
