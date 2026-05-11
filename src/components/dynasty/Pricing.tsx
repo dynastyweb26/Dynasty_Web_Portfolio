@@ -1,30 +1,64 @@
+import { Home, Rocket, ShieldCheck } from "lucide-react";
+
 const tiers = [
   {
     label: "Starter Site",
-    price: "Starting at $400",
-    desc: "Perfect for new businesses ready to look professional and start capturing leads online.",
+    price: "$600",
+    subtitle: "Get found. Look credible. Start capturing leads.",
+    badge: "Best for new businesses",
+    icon: Home,
     bullets: [
-      "Custom design tailored to your brand",
-      "Mobile-optimized layout",
-      "Quote & contact form",
-      "Basic SEO setup",
-      "5+ pages",
+      "Single page custom design tailored to your brand",
+      "Mobile responsive — perfect on every device",
+      "Hero section with strong headline and CTA",
+      "Services section clearly displaying what you offer",
+      "Contact form with direct lead delivery to your phone",
+      "Basic on-page SEO — titles, meta descriptions, keywords",
+      "Google Maps embed",
+      "Vercel deployment with fast loading URL",
+      "1 round of revisions",
+      "48-72 hour delivery",
     ],
+    cta: "Get Started — $600",
     popular: false,
   },
   {
     label: "Growth Site",
-    price: "Starting at $800",
-    desc: "For businesses ready to dominate locally — more pages, more trust signals, more conversions.",
+    price: "$1000",
+    subtitle: "Dominate locally. Convert visitors into booked jobs.",
+    badge: "Most Popular",
+    icon: Rocket,
     bullets: [
       "Everything in Starter",
-      "Up to 5 pages",
-      "Photo gallery or portfolio section",
-      "Google Business integration",
+      "Up to 5 pages — Home, About, Services, Gallery, Contact",
+      "Interactive estimate funnel — visitors get an instant price range",
+      "Photo gallery showcasing real completed work",
+      "Scrolling testimonial section",
+      "Trust badges and stat counters",
+      "Google Business Profile integration",
+      "Social media links and icons",
       "3 rounds of revisions",
       "Priority 48-hour turnaround",
+      "30 days post-launch support",
     ],
+    cta: "Get Started — $1000",
     popular: true,
+  },
+  {
+    label: "Monthly Retainer",
+    price: "$99/month",
+    subtitle: "We keep it running. You keep working.",
+    badge: "Add to any package",
+    icon: ShieldCheck,
+    bullets: [
+      "Site stays live and fast on Vercel",
+      "Content updates — photos, services, pricing changes",
+      "Monthly performance check",
+      "Priority response if anything breaks",
+      "Dedicated support — we're your guy, always",
+    ],
+    cta: "Add Retainer — $50/mo",
+    popular: false,
   },
 ];
 
@@ -42,55 +76,65 @@ const Pricing = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
-          {tiers.map((t) => (
-            <div
-              key={t.label}
-              className={`relative bg-surface-1 p-8 md:p-10 border transition-colors ${
-                t.popular ? "border-gold shadow-[0_15px_40px_-10px_hsl(var(--gold)/0.3)]" : "border-gold-faint"
-              }`}
-            >
-              {t.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-primary-foreground text-[10px] tracking-[0.25em] uppercase px-4 py-1 rounded-full font-medium">
-                  Most Popular
-                </div>
-              )}
-              <h3 className="font-display text-2xl md:text-3xl mb-3">{t.label}</h3>
-              <div className="font-display text-gold text-xl md:text-2xl mb-1">{t.price}</div>
-              <p className="text-xs text-muted-foreground/80 italic mb-5">
-                or finance from <span className="text-gold not-italic">$200/month</span>
-              </p>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-8">{t.desc}</p>
-
-              <ul className="space-y-3 mb-10">
-                {t.bullets.map((b) => (
-                  <li key={b} className="flex items-start gap-3 text-sm text-foreground/90">
-                    <span className="text-gold mt-1 flex-shrink-0"></span>
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <a
-                href="#contact"
-                className={`inline-block w-full text-center px-6 py-3 rounded-full text-sm font-medium tracking-wide transition-colors ${
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
+          {tiers.map((t) => {
+            const Icon = t.icon;
+            return (
+              <div
+                key={t.label}
+                className={`relative bg-surface-1 p-8 md:p-10 border flex flex-col ${
                   t.popular
-                    ? "bg-gold text-primary-foreground hover:bg-gold-light"
-                    : "border border-gold text-gold hover:bg-gold hover:text-primary-foreground"
+                    ? "border-gold shadow-[0_15px_40px_-10px_hsl(var(--gold)/0.3)]"
+                    : "border-gold-faint"
                 }`}
               >
-                Get a Quote
-              </a>
-            </div>
-          ))}
+                {t.popular && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-primary-foreground text-[10px] tracking-[0.25em] uppercase px-4 py-1 rounded-full font-medium">
+                    Most Popular
+                  </div>
+                )}
+
+                <Icon className="text-gold mb-6" size={36} strokeWidth={1.5} />
+
+                <h3 className="font-display text-2xl md:text-3xl mb-2">{t.label}</h3>
+                <div className="font-display text-gold text-2xl md:text-3xl mb-3">{t.price}</div>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">{t.subtitle}</p>
+
+                <p className="text-[10px] tracking-[0.25em] uppercase text-gold/80 mb-6">
+                  {t.badge}
+                </p>
+
+                <ul className="space-y-0 mb-10 flex-1">
+                  {t.bullets.map((b, i) => (
+                    <li
+                      key={b}
+                      className={`flex items-start gap-3 text-sm text-foreground/90 py-3 ${
+                        i !== 0 ? "border-t border-gold-faint" : ""
+                      }`}
+                    >
+                      <span className="text-gold mt-1 flex-shrink-0">✦</span>
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  href="#contact"
+                  className={`inline-block w-full text-center px-6 py-3 rounded-full text-sm font-medium tracking-wide transition-colors ${
+                    t.popular
+                      ? "bg-gold text-primary-foreground hover:bg-gold-light"
+                      : "border border-gold text-gold hover:bg-gold hover:text-primary-foreground"
+                  }`}
+                >
+                  {t.cta}
+                </a>
+              </div>
+            );
+          })}
         </div>
 
-        <p className="mt-12 text-center text-sm text-muted-foreground">
-          Not sure which fits?{" "}
-          <a href="#contact" className="text-gold hover:text-gold-light transition-colors underline underline-offset-4">
-            Let's talk
-          </a>{" "}
-          — consultations are free.
+        <p className="mt-12 text-center text-xs md:text-sm text-muted-foreground">
+          All sites include free discovery call and custom strategy before we build anything.
         </p>
       </div>
     </section>
